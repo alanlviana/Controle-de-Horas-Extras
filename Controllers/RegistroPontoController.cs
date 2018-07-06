@@ -3,6 +3,8 @@ using Chronos.Models;
 using Chronos.Models.ViewModel;
 using Chronos.Repository;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Net.Http;
 
 namespace Chronos.Controllers{
 
@@ -23,7 +25,7 @@ namespace Chronos.Controllers{
         }
 
         [HttpPost]
-        public void Inserir(RegistroPontoViewModel registroViewModel){
+        public void Inserir([FromBody]RegistroPontoViewModel registroViewModel){
             RegistroPonto registro = registroViewModel.toModel();
             RegistroPontoRepository.InserirNovo(registro);
         }

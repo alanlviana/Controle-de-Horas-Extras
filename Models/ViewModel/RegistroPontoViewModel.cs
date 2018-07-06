@@ -7,9 +7,9 @@ namespace Chronos.Models.ViewModel{
     public class RegistroPontoViewModel{
         
         [DataMember]
-        public int Id{get;}
+        public int Id{get;set;}
         [DataMember]
-        public DateTime HoraMarcacao{get;}
+        public DateTime HoraMarcacao{get;set;}
         private RegistroPontoViewModel(int id, DateTime horaMarcacao){
             this.Id = id;
             this.HoraMarcacao = horaMarcacao;
